@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style.css">
+      <script src="./script.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+  
+    <header>
+      <div>
+        <ul id="menu">
+          <li id="left"><a href="index.html" style="color: #99C3DD;">Home</a></li>
+          <li id="left"><a href="about.html">About</a></li>
+          <li id="right"><a href="cart.html"><i class="fa fa-shopping-bag" style="font-size:24px"></i></a></li>
+          <li id="right"><a href="login.html"><i class="fa fa-user" style="font-size:28px" aria-hidden="true"></i></a></li>
+          <li id="right"><a href="#"><i class="fa fa-search" id="search-icon" style="font-size:24px" aria-hidden="true"></i></a></li>
+          </ul>
+          <div id="search-menu">
+            <div class="wrapper1">
+                <form id="form" action="#" method="">
+                    <input id="popup-search" type="text" name="u" placeholder="Search...">
+                    <button id="popup-search-button" type="submit" name="search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="site-logo">
+        <div class="site-logo__logomark"><img src="./logos/logo.png"/></div>
+        <div class="site-logo__wordmark"><img src="./logos/logo draw.png"/></div>
+      </div>
+    </header>
+    <img src="./img/top image.png" alt="top image" class="top-img" />
+    <main>
+      
+      <section style="margin-left: 20px; margin-bottom: 100px;margin-top: 30px;" class="wrapper">
+        <h1 class="titles">PRODUCTS</h1>
+        <div>
+          <div class="products" id="hair-mist">
+            <ul class="price">
+              <li class="header">
+                <img src="./products/hair mist.png" alt="hair mist" />
+              </li>
+              <li class="grey">$ 20.00</li>
+              <li class="description">Floral Scent Hair Mist</li>
+              <li class="grey"><a href="#" class="button">Add to Cart</a></li>
+            </ul>
+          </div>
+          
+          <div class="products" id="hair-spray">
+            <ul class="price">
+              <li class="header">
+                <img src="./products/hair spray.png" alt="hair spray" />
+              </li>
+              <li class="grey">$ 25.00</li>
+              <li class="description">Detangle Hair Spray</li>
+              <li class="grey"><a href="#" class="button">Add to Cart</a></li>
+            </ul>
+          </div>
+          
+          <div class="products" id="pre-wash-hair-oil">
+            <ul class="price">
+              <li class="header">
+                <img src="./products/hair oil.png" alt="hair oil" />
+              </li>
+              <li class="grey">$ 30.00</li>
+              <li class="description">Pre-wash Hair Oil</li>
+              <li class="grey"><a href="#" class="button">Add to Cart</a></li>
+            </ul>
+          </div>
+          
+          <div class="products" id="s-and-s-hair-oil">
+            <ul class="price">
+              <li class="header">
+                <img src="./products/s and s hair oil.png" alt="s and s hair oil" />
+              </li>
+              <li class="grey">$ 40.00</li>
+              <li class="description">Smooth and Shine Hair Oil</li>
+              <li class="grey"><a href="#" class="button">Add to Cart</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="row">
+            <h1 class="titles" style="margin-top: 356px">ORGANICS</h1>
+            <div class="column">
+              <div class="card">
+                <img src="./organics/coconut oil.png" style="margin-top: 8px" id="coconut-oil">
+                <p style="padding-top: 6px;font-style: italic;">Coconut Oil</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="./organics/argan.png" id="argan">
+                <p style="font-style: italic;">Argan Oil</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="./organics/shea butter.png" style="padding-top: 4px" id="shea-butter">
+                <p style="padding-top: 2px;font-style: italic;">Shea Butter</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="./organics/rosemary.png" style="padding-top: 3px" id="rosemary">
+                <p style="font-style: italic;">Rosemary Oil</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <img src="./organics/apple cider.png" style="padding-top: 10px" id="apple-cider">
+                <p style="padding-top: 6px;font-style: italic;">Apple Vineger</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="./organics/aloe vera.png" style="padding-top: 10px" id="aloe-vera">
+                <p style="padding-top: 6px;font-style: italic;">Aloe Vera</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS MODALS -->
+      <div id="preWashHairModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./products/hair oil.png" alt="hair oil" class="modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Pre-Wash Hair Oil</h1>
+            <p style="font-size: 20px;font-weight: bold;">Price: <span style="font-size: 20px;font-weight: normal;">$ 30.00</span></p>
+            <p style="text-align: justify;
+          text-justify: inter-word;">The benefits behind Pre-wash hair oil is that it is a treatment that strength you roots, and hydration to your scalp that helps your hair becomes healthier. The organic that was focused on is Rosemary Oil that is a light weighting oil is formulated for all types of hair.</p>
+            </p>
+            <p style="font-weight: bold;">Ingrediants: <span style="font-weight: normal;">Rosemary oil, olive fruit, seed oil and castor.</span></p>
+            <p style="font-weight: bold;">Quantity: 
+              <span id="product_A_form" class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-subtract" type="button">-</button>
+                </span>
+              
+                <input id="product_A_qty" type="text" class="form-control no-padding text-center item-quantity" value="1">
+              
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-add" type="button">+</button>
+                </span>
+              </span>
+            </p>
+            <div>
+              <p style="font-weight: bold;" class="p-rate">Rating: </p>
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <a href="#" class="button">Add to Cart</a>
+              <img src="./Product t/prewash.png" alt="hair oil" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hairSprayModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./products/hair spray.png" alt="hair spray" class="modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Hair Spray (Leave in Conditioner)</h1>
+            <p style="font-size: 20px;font-weight: bold;">Price: 
+              <span style="font-size: 20px;font-weight: normal;">$ 25.00</span>
+            </p>
+            <p style="text-align: justify;text-justify: inter-word;">This spray helps in detangling your hair and moisturizing the hair with a light weighted leave in conditioner. It is enriched with Aloe Vera in order to hydrates your ends. This organic will help is showing a smooth and detangled hair with UV and heat protection.</p>
+            </p>
+            <p style="font-weight: bold;">Ingrediants: <span style="font-weight: normal;">Aloe Vera, water (Aqua/Eau), glycerin, hibiscus flower extract.</span></p>
+            <p style="font-weight: bold;">Quantity: 
+              <span id="product_B_form" class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-subtract" type="button">-</button>
+                </span>
+              
+                <input id="product_B_qty" type="text" class="form-control no-padding text-center item-quantity" value="1">
+              
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-add" type="button">+</button>
+                </span>
+              </span>
+            </p>
+            <div>
+              <p style="font-weight: bold;" class="p-rate">Rating: </p>
+              <div class="rate">
+                <input type="radio" id="star10" name="rate" value="5" />
+                <label for="star10" title="text">5 stars</label>
+                <input type="radio" id="star9" name="rate" value="4" />
+                <label for="star9" title="text">4 stars</label>
+                <input type="radio" id="star8" name="rate" value="3" />
+                <label for="star8" title="text">3 stars</label>
+                <input type="radio" id="star7" name="rate" value="2" />
+                <label for="star7" title="text">2 stars</label>
+                <input type="radio" id="star6" name="rate" value="1" />
+                <label for="star6" title="text">1 star</label>
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <a href="#" class="button">Add to Cart</a>
+              <img src="./Product t/hair spray.png" alt="hair spray" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hairMistModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./products/hair mist.png" alt="hair mist" class="modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Hair Mist</h1>
+            <p style="font-size: 20px;font-weight: bold;">Price: 
+              <span style="font-size: 20px;font-weight: normal;">$ 20.00</span>
+            </p>
+            <p style="text-align: justify;text-justify: inter-word;">This hair mist is enriched with shea butter because it hydrates, adds shine, and protects your hair from UV damage. The formula for this product is to boost the hydration of the hair. The scent that was based is from our iconic is the floral.</p>
+            </p>
+            <p style="font-weight: bold;">Ingrediants: <span style="font-weight: normal;">Shea Butter, water (Aqua) and hibiscus flower extract.</span></p>
+            <p style="font-weight: bold;">Quantity: 
+              <span id="product_C_form" class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-subtract" type="button">-</button>
+                </span>
+              
+                <input id="product_C_qty" type="text" class="form-control no-padding text-center item-quantity" value="1">
+              
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-add" type="button">+</button>
+                </span>
+              </span>
+            </p>
+            <div>
+              <p style="font-weight: bold;" class="p-rate">Rating: </p>
+              <div class="rate">
+                <input type="radio" id="star15" name="rate" value="5" />
+                <label for="star15" title="text">5 stars</label>
+                <input type="radio" id="star14" name="rate" value="4" />
+                <label for="star14" title="text">4 stars</label>
+                <input type="radio" id="star13" name="rate" value="3" />
+                <label for="star13" title="text">3 stars</label>
+                <input type="radio" id="star12" name="rate" value="2" />
+                <label for="star12" title="text">2 stars</label>
+                <input type="radio" id="star11" name="rate" value="1" />
+                <label for="star11" title="text">1 star</label>
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <a href="#" class="button">Add to Cart</a>
+              <img src="./Product t/mist.png" alt="hair mist" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="SAndSHairModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./products/s and s hair oil.png" alt="hair mist" class="modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Smooth and Shine Hair Oil</h1>
+            <p style="font-size: 20px;font-weight: bold;">Price: 
+              <span style="font-size: 20px;font-weight: normal;">$ 40.00</span>
+            </p>
+            <p style="text-align: justify;text-justify: inter-word;">This hair oil its main focus is using the organic called argan oil, it is a nourishing oil that provides instant shine, heat protectant, 48 hours of frizz control, and it helps your hair in becoming glossy and healthier.</p>
+            </p>
+            <p style="font-weight: bold;">Ingrediants: <span style="font-weight: normal;">Argan oil, coconut oil, castor seed.</span></p>
+            <p style="font-weight: bold;">Quantity: 
+              <span id="product_D_form" class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-subtract" type="button">-</button>
+                </span>
+              
+                <input id="product_D_qty" type="text" class="form-control no-padding text-center item-quantity" value="1">
+              
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-add" type="button">+</button>
+                </span>
+              </span>
+            </p>
+            <div>
+              <p style="font-weight: bold;" class="p-rate">Rating: </p>
+              <div class="rate">
+                <input type="radio" id="star20" name="rate" value="5" />
+                <label for="star20" title="text">5 stars</label>
+                <input type="radio" id="star19" name="rate" value="4" />
+                <label for="star19" title="text">4 stars</label>
+                <input type="radio" id="star18" name="rate" value="3" />
+                <label for="star18" title="text">3 stars</label>
+                <input type="radio" id="star17" name="rate" value="2" />
+                <label for="star17" title="text">2 stars</label>
+                <input type="radio" id="star16" name="rate" value="1" />
+                <label for="star16" title="text">1 star</label>
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <a href="#" class="button">Add to Cart</a>
+              <img src="./Product t/s and s .png" alt="s and s hair oil" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORGANICS MODALS -->
+      <div id="coconutOilModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/coconut oil.png" alt="coconut-oil" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Coconut Oil</h1>
+            <img src="./tutorials/coconut.png" alt="coconut-oil" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+
+      <div id="arganModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/argan.png" alt="argan" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Argan</h1>
+            <img src="./tutorials/argan oil.png" alt="argan-oil" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+
+      <div id="sheaButterModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/shea butter.png" alt="shea butter" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Shea Butter</h1>
+            <img src="./tutorials/shea butter.png" alt="shea butter" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+
+      <div id="rosemaryModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/rosemary.png" alt="rosemary" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Rosemary Oil</h1>
+            <img src="./tutorials/rosemary.png" alt="rosemary" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+
+      <div id="appleCiderModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/apple cider.png" alt="apple cider" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Apple Vineger</h1>
+            <img src="./tutorials/apple vinegar.png" alt="apple cider" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+
+      <div id="aloeVeraModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img src="./organics/aloe vera.png" alt="aloe vera" class="organics-modal-image" />
+          </div>
+          <div class="modal-body" style="margin-left: 400px;">
+            <h1>Benefits of Aloe Vera</h1>
+            <img src="./tutorials/aloe vera.png" alt="aloe vera" class="organics-tutorial" />
+          </div>
+        </div>
+      </div>
+      
+      <div id="sparkle-container"></div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6" style="margin-right: 50px;">
+            <h6>ZPARKLE</h6>
+            <img src="./logos/logo.png" class="footer-img" />
+            <p class="text-justify"> Our products are made up of the perfect ingredients that has been focusing on strength, hydration and nourished hair care for a healthier hair and scalp.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-6">
+            <h6>Subscribe</h6>
+              <div class="footer-section newsletter">
+                <p>Subscribe with your email to receive our latest news and offers.</p>
+                <p>Agreement is not a state of any purchase. Emails rate may apply. Message frequency varies. Send HELP to help you or STOP to unsubscribe.</p>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2025 All Rights Reserved by 
+         <a href="#">Zparkle</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+    <script>
+
+
+    var modal = document.getElementById("hairSprayModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("hair-spray");
+  
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[1];
+  
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+
+            // Get the modal
+    var modal1 = document.getElementById("preWashHairModal");
+    
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("pre-wash-hair-oil");
+  
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close")[0];
+  
+    // When the user clicks the button, open the modal 
+    btn1.onclick = function() {
+      modal1.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+      modal1.style.display = "none";
+    }
+  
+
+    var modal2 = document.getElementById("hairMistModal");
+    
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("hair-mist");
+  
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[2];
+  
+    // When the user clicks the button, open the modal 
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+
+
+    var modal3 = document.getElementById("SAndSHairModal");
+    
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("s-and-s-hair-oil");
+  
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close")[3];
+  
+    // When the user clicks the button, open the modal 
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+      modal3.style.display = "none";
+    }
+  
+
+
+    var modal4 = document.getElementById("coconutOilModal");
+    
+    // Get the button that opens the modal
+    var btn4 = document.getElementById("coconut-oil");
+  
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("close")[4];
+  
+    // When the user clicks the button, open the modal 
+    btn4.onclick = function() {
+      modal4.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function() {
+      modal4.style.display = "none";
+    }
+
+
+    var modal5 = document.getElementById("arganModal");
+    
+    // Get the button that opens the modal
+    var btn5 = document.getElementById("argan");
+  
+    // Get the <span> element that closes the modal
+    var span5 = document.getElementsByClassName("close")[5];
+  
+    // When the user clicks the button, open the modal 
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span5.onclick = function() {
+      modal5.style.display = "none";
+    }
+  
+
+    var modal6 = document.getElementById("sheaButterModal");
+    
+    // Get the button that opens the modal
+    var btn6 = document.getElementById("shea-butter");
+  
+    // Get the <span> element that closes the modal
+    var span6 = document.getElementsByClassName("close")[6];
+  
+    // When the user clicks the button, open the modal 
+    btn6.onclick = function() {
+      modal6.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span6.onclick = function() {
+      modal6.style.display = "none";
+    }
+  
+
+    var modal7 = document.getElementById("rosemaryModal");
+    
+    // Get the button that opens the modal
+    var btn7 = document.getElementById("rosemary");
+  
+    // Get the <span> element that closes the modal
+    var span7 = document.getElementsByClassName("close")[7];
+  
+    // When the user clicks the button, open the modal 
+    btn7.onclick = function() {
+      modal7.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span7.onclick = function() {
+      modal7.style.display = "none";
+    }
+
+
+    var modal8 = document.getElementById("appleCiderModal");
+    
+    // Get the button that opens the modal
+    var btn8 = document.getElementById("apple-cider");
+  
+    // Get the <span> element that closes the modal
+    var span8 = document.getElementsByClassName("close")[8];
+  
+    // When the user clicks the button, open the modal 
+    btn8.onclick = function() {
+      modal8.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span8.onclick = function() {
+      modal8.style.display = "none";
+    }
+
+
+    var modal9 = document.getElementById("aloeVeraModal");
+    
+    // Get the button that opens the modal
+    var btn9 = document.getElementById("aloe-vera");
+  
+    // Get the <span> element that closes the modal
+    var span9 = document.getElementsByClassName("close")[9];
+  
+    // When the user clicks the button, open the modal 
+    btn9.onclick = function() {
+      modal9.style.display = "block";
+    }
+  
+    // When the user clicks on <span> (x), close the modal
+    span9.onclick = function() {
+      modal9.style.display = "none";
+    }
+  
+
+    // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }  
+      if (event.target == modal1) {
+         modal1.style.display = "none";
+      }
+      if (event.target == modal2) {
+          modal2.style.display = "none";
+      }
+      if (event.target == modal3) {
+          modal3.style.display = "none";
+      }
+      if (event.target == modal4) {
+          modal4.style.display = "none";
+      }
+      if (event.target == modal5) {
+          modal5.style.display = "none";
+      }
+      if (event.target == modal6) {
+          modal6.style.display = "none";
+      }
+      if (event.target == modal7) {
+          modal7.style.display = "none";
+      }
+      if (event.target == modal8) {
+          modal8.style.display = "none";
+      }
+      if (event.target == modal9) {
+          modal9.style.display = "none";
+      }
+    }
+
+
+      // product A
+      var minus_A = document.querySelector("#product_A_form .btn-subtract")
+      var add_A = document.querySelector("#product_A_form .btn-add");
+      var quantity_A = document.querySelector("#product_A_form .item-quantity");
+
+      minus_A.addEventListener("click", function(){
+          quantity_A.value--;
+      });
+
+      add_A.addEventListener("click", function() {
+          quantity_A.value++;
+      });
+
+
+      var minus_B = document.querySelector("#product_B_form .btn-subtract")
+      var add_B = document.querySelector("#product_B_form .btn-add");
+      var quantity_B = document.querySelector("#product_B_form .item-quantity");
+
+      minus_B.addEventListener("click", function(){
+          quantity_B.value--;
+      });
+
+      add_B.addEventListener("click", function() {
+          quantity_B.value++;
+      });
+
+
+      var minus_C = document.querySelector("#product_C_form .btn-subtract")
+      var add_C = document.querySelector("#product_C_form .btn-add");
+      var quantity_C = document.querySelector("#product_C_form .item-quantity");
+
+      minus_C.addEventListener("click", function(){
+          quantity_C.value--;
+      });
+
+      add_C.addEventListener("click", function() {
+          quantity_C.value++;
+      });
+
+
+      var minus_D = document.querySelector("#product_D_form .btn-subtract")
+      var add_D = document.querySelector("#product_D_form .btn-add");
+      var quantity_D = document.querySelector("#product_D_form .item-quantity");
+
+      minus_D.addEventListener("click", function(){
+          quantity_D.value--;
+      });
+
+      add_D.addEventListener("click", function() {
+          quantity_D.value++;
+      });
+
+      </script>
+</html>

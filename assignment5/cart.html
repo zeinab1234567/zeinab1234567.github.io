@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+      <head>
+        <link rel="stylesheet" href="cart-style.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+    
+      <header>
+        <div>
+          <ul id="menu">
+            <li id="left"><a href="index.html">Home</a></li>
+            <li id="left"><a href="about.html">About</a></li>
+            <li id="right"><a href="cart.html"><i class="fa fa-shopping-bag" style="font-size:24px;color: #99C3DD;"></i></a></li>
+            <li id="right"><a href="login.html"><i class="fa fa-user" style="font-size:28px" aria-hidden="true"></i></a></li>
+            <li id="right"><a href="#"><i class="fa fa-search" id="search-icon" style="font-size:24px" aria-hidden="true"></i></a></li>
+            </ul>
+            <div id="search-menu">
+              <div class="wrapper">
+                  <form id="form" action="#" method="">
+                      <input id="popup-search" type="text" name="u" placeholder="Search...">
+                      <button id="popup-search-button" type="submit" name="search">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </form>
+              </div>
+          </div>
+        </div>
+        <div class="site-logo">
+          <div class="site-logo__logomark"><img src="./logos/logo.png"/></div>
+          <div class="site-logo__wordmark"><img src="./logos/logo draw.png"/></div>
+        </div>
+      </header>
+      <main>
+        <div class="cart-container">
+          <div class="title-box">
+              <h1>Your shopping cart</h1>
+              <p>ID: 548856</p>
+          </div>
+          <div class="product-box">
+              <div class="img-box">
+                  <img src="./products/hair spray.png" alt="hair spray">
+              </div>
+              <div class="info-box">
+                  <h2>Hair Spray (Leave in Conditioner)</h2>
+                  <h5>25.00$</h5>
+                  <p class="stock">In stock</p>
+                  <div class="amount-box">
+                      <div class="minus-box">
+                          -
+                      </div>
+                      <input type="number" readonly value="1" min="0" max="10" class="amount" id="amount">
+                      <div class="plus-box">
+                          +
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <hr>
+          <div class="cost-box">
+              <div>
+                  <p>Standard Package</p>
+                  <p>FREE</p>
+              </div>
+              <div>
+                  <p>Total VAT</p>
+                  <p class="VAT">5.00</p>
+              </div>
+              <div>
+                  <p>Total Price</p>
+                  <p class="NOK">30.00</p>
+              </div>
+          </div>
+          <button class="Checkout-btn">CHECKOUT</button>
+      </div>
+      <div class="promo-box">
+          <h5>Enter your promo code</h5>
+          <input type="text" maxlength="6"  id="promo">
+          <button class="send-promo">Send</button>
+      </div>
+        
+        <div id="sparkle-container"></div>
+      </main>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6" style="margin-right: 50px;">
+              <h6>ZPARKLE</h6>
+              <img src="./logos/logo.png" class="footer-img" />
+              <p class="text-justify"> Our products are made up of the perfect ingredients that has been focusing on strength, hydration and nourished hair care for a healthier hair and scalp.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-6">
+              <h6>Subscribe</h6>
+                <div class="footer-section newsletter">
+                  <p>Subscribe to our newsletter to stay updated on our latest news and offers.</p>
+                  <p>Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel.</p>
+                  <input type="email" placeholder="Enter your email" required>
+                  <button type="submit">Subscribe</button>
+              </div>
+            </div>
+  
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2025 All Rights Reserved by 
+           <a href="#">Zparkle</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+  <script>
+    
+const container = document.querySelector(".container");
+const minus = document.querySelector(".minus-box");
+const amount = document.getElementById("amount");
+const plus = document.querySelector(".plus-box");
+const stock = document.querySelector(".stock");
+const checkoutBtn = document.querySelector(".gift");
+const promoBox = document.querySelector(".promo-box");
+const promoInput = document.getElementById("promo");
+const sendPromoBtn = document.querySelector(".send-promo");
+const promoApplied = document.querySelector(".applied");
+
+const vat = document.querySelector(".VAT");
+const nok = document.querySelector(".NOK");
+
+let vatValueDefault = 5.00;
+let nokValueDefault = 25.00;
+
+let free = false;
+
+plus.addEventListener("click",()=>{
+    if(amount.value<10){
+        amount.value ++;
+        if(amount.value !== 0 && free === false){
+            nok.innerHTML = `${nokValueDefault*amount.value+5}.00`;
+        }
+    }
+    if(amount.value == 10){
+        stock.style.backgroundColor ="#BE3144";
+        stock.innerHTML = "out of stock";
+    }
+})
+
+minus.addEventListener("click",()=>{
+    if(amount.value>0){
+        amount.value --;
+        if(amount.value !== 0 && free === false){
+            nok.innerHTML = `${nokValueDefault*amount.value+5}.00`;
+        }
+    }
+    stock.style.backgroundColor = "#83bd46";
+    stock.innerHTML = "In stock";
+})
+
+checkoutBtn.addEventListener("click", ()=>{
+    if(!promoInput.classList.contains("applied")){
+        container.style.opacity = ".5";
+        container.style.pointerEvents = "none";
+        promoBox.style.opacity = "1";
+        promoBox.style.display = "flex";
+    }
+})
+sendPromoBtn.addEventListener("click",()=>{
+    if(promoInput.value.length >=1){
+        container.style.opacity = "1";
+        container.style.pointerEvents = "auto";
+        promoBox.style.opacity = "0";
+        promoBox.style.display = "none";
+        promoInput.classList.add("applied");
+        promoApplied.style.opacity = "1";
+        promoApplied.style.display = "block"
+        vat.innerHTML = `It's free for you`;
+        nok.innerHTML = `It's free for you`;
+        free = true;
+    }
+})
+  </script>
+</html>
